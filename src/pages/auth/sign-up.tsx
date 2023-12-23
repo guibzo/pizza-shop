@@ -28,8 +28,6 @@ export const SignUp = () => {
 
   const handleSignUp = async (data: SignUpForm) => {
     try {
-      console.log(data);
-
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
       toast.success("Restaurante cadastrado com sucesso!", {
@@ -94,7 +92,7 @@ export const SignUp = () => {
               Finalizar cadastro
             </Button>
 
-            <p className="leadng-relaxed px-6 text-center text-sm text-muted-foreground">
+            <p className="px-6 text-sm text-center leadng-relaxed text-muted-foreground">
               Ao continuar, você concorda com nossos{" "}
               <Link to="/sign-up" className="underline underline-offset-4">
                 Termos de serviço
