@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 
-export const AppLayout = ({}) => {
+export const AppLayout = () => {
   return (
     <div>
       <h1>Cabeçalho</h1>
