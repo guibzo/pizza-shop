@@ -25,7 +25,7 @@ export const AccountMenu = () => {
           <span>Perfil da Loja</span>
         </DropdownMenuItem>
 
-        <DropdownMenuItem className="text-rose-600 dark:text-rose-500">
+        <DropdownMenuItem className="text-red-500 dark:text-red-400">
           <LogOut className="w-4 h-4 mr-2" />
           <span>Sair</span>
         </DropdownMenuItem>
