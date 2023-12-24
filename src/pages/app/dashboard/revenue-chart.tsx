@@ -21,7 +21,7 @@ import {
 const data = [
   { date: "10/12", revenue: 1200 },
   { date: "11/12", revenue: 1300 },
-  { date: "12/12", revenue: 200 },
+  { date: "12/12", revenue: 1200 },
   { date: "13/12", revenue: 400 },
   { date: "14/12", revenue: 100 },
   { date: "15/12", revenue: 1500 },
@@ -45,7 +45,22 @@ export const RevenueChart = () => {
         <ResponsiveContainer width="100%" height={240}>
           <LineChart data={data} style={{ fontSize: 12 }}>
             <XAxis dataKey="date" tickLine={false} axisLine={false} dy={16} />
-            <Tooltip formatter={(value: string) => [value, "R$"]} />
+            <Tooltip
+              formatter={(value: string) => [
+                parseFloat(value).toLocaleString("pt-BR", {
+                  style: "currency",
+                  currency: "BRL",
+                }),
+                "Receita",
+              ]}
+              contentStyle={{
+                background: "#111",
+                color: "#fff",
+                fontWeight: "semibold",
+                border: "1px solid #555",
+                borderRadius: "4px",
+              }}
+            />
 
             <YAxis
               stroke="#888"
@@ -60,11 +75,13 @@ export const RevenueChart = () => {
               }
             />
 
+            <CartesianGrid vertical={false} className="stroke-muted" />
+
             <Line
               type="linear"
               strokeWidth={2}
               dataKey="revenue"
-              stroke={colors.violet["500"]}
+              stroke={colors.violet[500]}
             />
           </LineChart>
         </ResponsiveContainer>
