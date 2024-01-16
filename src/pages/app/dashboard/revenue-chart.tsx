@@ -1,33 +1,32 @@
 import {
+  CartesianGrid,
+  Line,
+  LineChart,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from 'recharts'
+import colors from 'tailwindcss/colors'
+
+import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-
-import colors from "tailwindcss/colors";
-
-import {
-  ResponsiveContainer,
-  LineChart,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Line,
-  Tooltip,
-} from "recharts";
+} from '@/components/ui/card'
 
 const data = [
-  { date: "10/12", revenue: 1200 },
-  { date: "11/12", revenue: 1300 },
-  { date: "12/12", revenue: 1200 },
-  { date: "13/12", revenue: 400 },
-  { date: "14/12", revenue: 100 },
-  { date: "15/12", revenue: 1500 },
-  { date: "16/12", revenue: 900 },
-  { date: "17/12", revenue: 800 },
-];
+  { date: '10/12', revenue: 1200 },
+  { date: '11/12', revenue: 1300 },
+  { date: '12/12', revenue: 1200 },
+  { date: '13/12', revenue: 400 },
+  { date: '14/12', revenue: 100 },
+  { date: '15/12', revenue: 1500 },
+  { date: '16/12', revenue: 900 },
+  { date: '17/12', revenue: 800 },
+]
 
 export const RevenueChart = () => {
   return (
@@ -47,18 +46,18 @@ export const RevenueChart = () => {
             <XAxis dataKey="date" tickLine={false} axisLine={false} dy={16} />
             <Tooltip
               formatter={(value: string) => [
-                parseFloat(value).toLocaleString("pt-BR", {
-                  style: "currency",
-                  currency: "BRL",
+                parseFloat(value).toLocaleString('pt-BR', {
+                  style: 'currency',
+                  currency: 'BRL',
                 }),
-                "Receita",
+                'Receita',
               ]}
               contentStyle={{
-                background: "#111",
-                color: "#fff",
-                fontWeight: "semibold",
-                border: "1px solid #555",
-                borderRadius: "4px",
+                background: '#111',
+                color: '#fff',
+                fontWeight: 'semibold',
+                border: '1px solid #555',
+                borderRadius: '4px',
               }}
             />
 
@@ -68,9 +67,9 @@ export const RevenueChart = () => {
               tickLine={false}
               width={80}
               tickFormatter={(value: number) =>
-                value.toLocaleString("pt-BR", {
-                  style: "currency",
-                  currency: "BRL",
+                value.toLocaleString('pt-BR', {
+                  style: 'currency',
+                  currency: 'BRL',
                 })
               }
             />
@@ -87,5 +86,5 @@ export const RevenueChart = () => {
         </ResponsiveContainer>
       </CardContent>
     </Card>
-  );
-};
+  )
+}

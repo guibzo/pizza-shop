@@ -1,5 +1,6 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Utensils } from "lucide-react";
+import { Utensils } from 'lucide-react'
+
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 export const MonthOrdersAmountCard = () => {
   return (
@@ -17,5 +18,5 @@ export const MonthOrdersAmountCard = () => {
         </p>
       </CardContent>
     </Card>
-  );
-};
+  )
+}

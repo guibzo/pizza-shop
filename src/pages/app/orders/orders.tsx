@@ -1,14 +1,16 @@
+import { Helmet } from 'react-helmet-async'
+
+import { Pagination } from '@/components/pagination'
 import {
   Table,
   TableBody,
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
-import { Helmet } from "react-helmet-async";
-import { OrderTableRow } from "./order-table-row";
-import { OrderTableFilters } from "./order-table-filters";
-import { Pagination } from "@/components/pagination";
+} from '@/components/ui/table'
+
+import { OrderTableFilters } from './order-table-filters'
+import { OrderTableRow } from './order-table-row'
 
 export const Orders = () => {
   return (
@@ -37,7 +39,7 @@ export const Orders = () => {
 
               <TableBody>
                 {Array.from({ length: 10 }).map((_, i) => {
-                  return <OrderTableRow key={i} />;
+                  return <OrderTableRow key={i} />
                 })}
               </TableBody>
             </Table>
@@ -47,5 +49,5 @@ export const Orders = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}

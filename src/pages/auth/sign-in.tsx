@@ -1,40 +1,40 @@
-import { Helmet } from "react-helmet-async";
-import { useForm } from "react-hook-form";
+import { Helmet } from 'react-helmet-async'
+import { useForm } from 'react-hook-form'
+import { Link } from 'react-router-dom'
+import { toast } from 'sonner'
+import { z } from 'zod'
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { z } from "zod";
-import { toast } from "sonner";
-import { Link } from "react-router-dom";
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
 
 const signInFormSchema = z.object({
   email: z.string().email(),
-});
+})
 
-type SignInForm = z.infer<typeof signInFormSchema>;
+type SignInForm = z.infer<typeof signInFormSchema>
 
 export const SignIn = () => {
   const {
     register,
     handleSubmit,
     formState: { isSubmitting },
-  } = useForm<SignInForm>();
+  } = useForm<SignInForm>()
 
   const handleSignIn = async (data: SignInForm) => {
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      await new Promise((resolve) => setTimeout(resolve, 1000))
 
-      toast.success("Enviamos um link de autenticação para seu e-mail.", {
+      toast.success('Enviamos um link de autenticação para seu e-mail.', {
         action: {
-          label: "Reenviar",
+          label: 'Reenviar',
           onClick: () => handleSignIn(data),
         },
-      });
+      })
     } catch (e) {
-      toast.error("Credenciais inválidas.");
+      toast.error('Credenciais inválidas.')
     }
-  };
+  }
 
   return (
     <>
@@ -56,7 +56,7 @@ export const SignIn = () => {
           <form className="space-y-4" onSubmit={handleSubmit(handleSignIn)}>
             <div className="space-y-2">
               <Label htmlFor="email">Seu e-mail</Label>
-              <Input id="email" type="email" {...register("email")} />
+              <Input id="email" type="email" {...register('email')} />
             </div>
 
             <Button disabled={isSubmitting} className="w-full" type="submit">
@@ -66,5 +66,5 @@ export const SignIn = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}

@@ -1,13 +1,14 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Search, X } from 'lucide-react'
+
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { Search, X } from "lucide-react";
+} from '@/components/ui/select'
 
 export const OrderTableFilters = () => {
   return (
@@ -40,5 +41,5 @@ export const OrderTableFilters = () => {
         Remover filtros
       </Button>
     </form>
-  );
-};
+  )
+}
