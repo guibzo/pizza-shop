@@ -1,8 +1,9 @@
-import { Home, Pizza, UtensilsCrossed } from "lucide-react";
-import { Separator } from "./ui/separator";
-import { NavLink } from "./nav-link";
-import { ThemeToggle } from "./theme/theme-toggle";
-import { AccountMenu } from "./account-menu";
+import { Home, Pizza, UtensilsCrossed } from 'lucide-react'
+
+import { AccountMenu } from './account-menu'
+import { NavLink } from './nav-link'
+import { ThemeToggle } from './theme/theme-toggle'
+import { Separator } from './ui/separator'
 
 export const Header = () => {
   return (
@@ -30,5 +31,5 @@ export const Header = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

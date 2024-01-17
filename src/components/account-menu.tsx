@@ -1,5 +1,6 @@
-import { Building, ChevronDown, LogOut } from "lucide-react";
-import { Button } from "./ui/button";
+import { Building, ChevronDown, LogOut } from 'lucide-react'
+
+import { Button } from './ui/button'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -7,7 +8,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
+} from './ui/dropdown-menu'
 
 export const AccountMenu = () => {
   return (
@@ -43,5 +44,5 @@ export const AccountMenu = () => {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  );
-};
+  )
+}

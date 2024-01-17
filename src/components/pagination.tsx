@@ -3,21 +3,22 @@ import {
   ChevronRight,
   ChevronsLeft,
   ChevronsRight,
-} from "lucide-react";
-import { Button } from "./ui/button";
+} from 'lucide-react'
+
+import { Button } from './ui/button'
 
 type PaginationProps = {
-  pageIndex: number;
-  totalCount: number;
-  perPage: number;
-};
+  pageIndex: number
+  totalCount: number
+  perPage: number
+}
 
 export const Pagination = ({
   pageIndex,
   perPage,
   totalCount,
 }: PaginationProps) => {
-  const pages = Math.ceil(totalCount / perPage) || 1;
+  const pages = Math.ceil(totalCount / perPage) || 1
 
   return (
     <div className="flex items-center justify-between">
@@ -52,5 +53,5 @@ export const Pagination = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
