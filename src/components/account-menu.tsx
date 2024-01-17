@@ -27,7 +27,7 @@ export const AccountMenu = () => {
         <DropdownMenuLabel className="flex flex-col ">
           <span>Guilherme Viana</span>
           <span className="text-xs font-normal text-muted-foreground">
-            lulugui15@hotmail.com
+            imluizguilara@hotmail.com
           </span>
         </DropdownMenuLabel>
 
