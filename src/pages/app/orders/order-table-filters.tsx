@@ -46,10 +46,10 @@ export const OrderTableFilters = () => {
   }: OrderFiltersSchema) => {
     setSearchParams((prev) => {
       orderId ? prev.set('orderId', orderId) : prev.delete('orderId')
+      status ? prev.set('status', status) : prev.delete('status')
       customerName
         ? prev.set('customerName', customerName)
         : prev.delete('customerName')
-      status ? prev.set('status', status) : prev.delete('status')
 
       prev.set('page', '1')
 

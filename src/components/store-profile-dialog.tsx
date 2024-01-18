@@ -7,8 +7,8 @@ import { z } from 'zod'
 import {
   getManagedRestaurant,
   GetManagedRestaurantResponse,
-} from '@/api/get-managed-restaurant'
-import { updateProfile } from '@/api/update-profile'
+} from '@/api/account/get-managed-restaurant'
+import { updateProfile } from '@/api/account/update-profile'
 
 import { Button } from './ui/button'
 import {
