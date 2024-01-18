@@ -6,7 +6,7 @@ settings:
 
 dependencies:
   '@hookform/resolvers':
-    specifier: ^3.3.2
+    specifier: ^3.3.4
     version: 3.3.4(react-hook-form@7.49.3)
   '@radix-ui/react-dialog':
     specifier: ^1.0.5
