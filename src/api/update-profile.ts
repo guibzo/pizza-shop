@@ -9,6 +9,8 @@ export const updateProfile = async ({
   name,
   description,
 }: UpdateProfileBody) => {
+  // throw new Error()
+
   await api.put('/profile', {
     name,
     description,
