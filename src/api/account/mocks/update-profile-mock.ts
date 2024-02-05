@@ -6,7 +6,7 @@ export const updateProfileMock = http.put<never, UpdateProfileBody>(
   async ({ request }) => {
     const { name } = await request.json();
 
-    if (name === "Bozo Pizza") {
+    if (name === "Rocket Pizza") {
       return new HttpResponse(null, { status: 204 });
     }
 
