@@ -1,9 +1,9 @@
-import { api } from '@/libs/axios'
+import { api } from "@/libs/axios";
 
-type UpdateProfileBody = {
-  name: string
-  description: string | null
-}
+export type UpdateProfileBody = {
+  name: string;
+  description: string | null;
+};
 
 export const updateProfile = async ({
   name,
@@ -11,8 +11,8 @@ export const updateProfile = async ({
 }: UpdateProfileBody) => {
   // throw new Error()
 
-  await api.put('/profile', {
+  await api.put("/profile", {
     name,
     description,
-  })
-}
+  });
+};
