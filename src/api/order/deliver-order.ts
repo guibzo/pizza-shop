@@ -1,9 +1,9 @@
-import { api } from '@/libs/axios'
+import { api } from "@/libs/axios";
 
-type DeliverOrderParams = {
-  orderId: string
-}
+export type DeliverOrderParams = {
+  orderId: string;
+};
 
 export const deliverOrder = async ({ orderId }: DeliverOrderParams) => {
-  await api.patch(`/orders/${orderId}/deliver`)
-}
+  await api.patch(`/orders/${orderId}/deliver`);
+};

@@ -1,9 +1,9 @@
-import { api } from '@/libs/axios'
+import { api } from "@/libs/axios";
 
-type CancelOrderParams = {
-  orderId: string
-}
+export type CancelOrderParams = {
+  orderId: string;
+};
 
 export const cancelOrder = async ({ orderId }: CancelOrderParams) => {
-  await api.patch(`/orders/${orderId}/cancel`)
-}
+  await api.patch(`/orders/${orderId}/cancel`);
+};

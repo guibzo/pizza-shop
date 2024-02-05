@@ -11,26 +11,34 @@ import { getMonthCanceledOrdersAmountMock } from "../metrics/mocks/get-month-can
 import { getMonthOrdersAmountMock } from "../metrics/mocks/get-month-orders-amount-mock";
 import { getMonthRevenueMock } from "../metrics/mocks/get-month-revenue-mock";
 import { getPopularProductsMock } from "../metrics/mocks/get-popular-products-mock";
+import { approveOrderMock } from "../order/mocks/approve-order-mock";
+import { cancelOrderMock } from "../order/mocks/cancel-order-mock";
+import { deliverOrderMock } from "../order/mocks/deliver-order-mock";
+import { dispatchOrderMock } from "../order/mocks/dispatch-order-mock";
 import { getOrderDetailsMock } from "../order/mocks/get-order-details-mock";
 import { getOrdersMock } from "../order/mocks/get-orders-mock";
 
 export const worker = setupWorker(
   signInMock,
-
+  //
   getDailyRevenueInPeriodMock,
   getDayOrdersAmountMock,
   getMonthCanceledOrdersAmountMock,
   getMonthOrdersAmountMock,
   getMonthRevenueMock,
   getPopularProductsMock,
-
+  //
   getManagedRestaurantMock,
   getProfileMock,
   registerRestaurantMock,
   updateProfileMock,
-
+  //
   getOrdersMock,
   getOrderDetailsMock,
+  approveOrderMock,
+  cancelOrderMock,
+  deliverOrderMock,
+  dispatchOrderMock,
 );
 
 export async function enableMSW() {
