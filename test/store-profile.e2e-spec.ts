@@ -14,7 +14,9 @@ test("update profile successfully", async ({ page }) => {
 
   const toast = page.getByText("Perfil atualizado com sucesso!");
 
-  expect(toast).toBeVisible();
+  await expect(toast).toBeVisible();
 
-  expect(page.getByRole("button", { name: "Bozo Pizzaria" })).toBeVisible();
+  await expect(
+    page.getByRole("button", { name: "Bozo Pizzaria" }),
+  ).toBeVisible();
 });

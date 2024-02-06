@@ -10,7 +10,7 @@ test("sign in successfully", async ({ page }) => {
     "Enviamos um link de autenticação para seu e-mail.",
   );
 
-  expect(toast).toBeVisible();
+  await expect(toast).toBeVisible();
 
   // hack to see last action on tests ui since it is bugged
   // await page.waitForTimeout(2000);
@@ -24,7 +24,7 @@ test("sign in with wrong credentails", async ({ page }) => {
 
   const toast = page.getByText("Credenciais inválidas.");
 
-  expect(toast).toBeVisible();
+  await expect(toast).toBeVisible();
 });
 
 test("navigate to new restaurant page", async ({ page }) => {
