@@ -12,8 +12,6 @@ test("display month orders amount metric", async ({ page }) => {
 
   expect(page.getByText("20", { exact: true })).toBeVisible();
   expect(page.getByText("-5% em relação ao mês passado")).toBeVisible();
-
-  await page.waitForTimeout(2000);
 });
 
 test("display day orders amount metric", async ({ page }) => {
